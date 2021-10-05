@@ -60,7 +60,7 @@ export class Item<Data = unknown> implements _Item<Data> {
 
   hide(): void {
     if (this.element) {
-      this.routines.hideElement(this.element);
+      this.routines.hideElement(this.element); //TODO
     }
   }
 

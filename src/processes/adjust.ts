@@ -7,7 +7,7 @@ export default class Adjust extends BaseProcessFactory(CommonProcess.adjust) {
     const { workflow, viewport, state: { scrollState } } = scroller;
 
     scrollState.positionBeforeAdjust = viewport.scrollPosition;
-    Adjust.setPaddings(scroller);
+    Adjust.setPaddings(scroller); //TODO
     scrollState.positionAfterAdjust = viewport.scrollPosition;
 
     // scroll position adjustments
@@ -59,6 +59,7 @@ export default class Adjust extends BaseProcessFactory(CommonProcess.adjust) {
       );
     }
 
+    //TODO
     backward.size = bwdSize;
     forward.size = fwdSize;
 

@@ -7,7 +7,7 @@ export default class Clip extends BaseProcessFactory(CommonProcess.clip) {
   static run(scroller: Scroller): void {
     const { workflow } = scroller;
 
-    Clip.doClip(scroller);
+    Clip.doClip(scroller); //TODO
 
     workflow.call({
       process: Clip.process,
@@ -32,9 +32,11 @@ export default class Clip extends BaseProcessFactory(CommonProcess.clip) {
 
     if (itemsToRemove.length) {
       if (size[Direction.backward]) {
+        //TODO:
         paddings.byDirection(Direction.backward).size += size[Direction.backward];
       }
       if (size[Direction.forward]) {
+        //TODO:
         paddings.byDirection(Direction.forward).size += size[Direction.forward];
       }
       if (scroller.settings.onBeforeClip) {

@@ -12,7 +12,7 @@ export default class Update extends BaseAdapterProcessFactory(AdapterProcess.upd
       return;
     }
 
-    const shouldUpdate = Update.doUpdate(scroller, params);
+    const shouldUpdate = Update.doUpdate(scroller, params); //TODO
 
     scroller.workflow.call({
       process: Update.process,
@@ -42,7 +42,7 @@ export default class Update extends BaseAdapterProcessFactory(AdapterProcess.upd
       delta = - buffer.getSizeByIndex(trackedIndex) + firstItemDiff;
     }
 
-    toRemove.forEach(item => item.hide());
+    toRemove.forEach(item => item.hide()); //TODO
     logger.log(() => toRemove.length
       ? 'items to remove: [' + toRemove.map(({ $index }) => $index).join(',') + ']'
       : 'no items to remove'

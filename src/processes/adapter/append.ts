@@ -18,7 +18,7 @@ export default class Append extends BaseAdapterProcessFactory(AdapterProcess.app
       return;
     }
 
-    const shouldAppend = Append.doAppend(scroller, process, params);
+    const shouldAppend = Append.doAppend(scroller, process, params); //TODO
 
     scroller.workflow.call({
       process: Append.process,
@@ -38,7 +38,7 @@ export default class Append extends BaseAdapterProcessFactory(AdapterProcess.app
     } else {
       afterIndex = (eof ? buffer.absMaxIndex : buffer.maxIndex) - (!buffer.size && !opposite ? 1 : 0);
     }
-    return Insert.doInsert(scroller, {
+    return Insert.doInsert(scroller, { //TODO
       items,
       beforeIndex,
       afterIndex,

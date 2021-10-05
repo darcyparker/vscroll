@@ -12,7 +12,7 @@ export default class Insert extends BaseAdapterProcessFactory(AdapterProcess.ins
     if (!params) {
       return;
     }
-    const shouldInsert = Insert.doInsert(scroller, params);
+    const shouldInsert = Insert.doInsert(scroller, params); //TODO
 
     scroller.workflow.call({
       process: Insert.process,
@@ -22,7 +22,7 @@ export default class Insert extends BaseAdapterProcessFactory(AdapterProcess.ins
 
   static doInsert(scroller: Scroller, params: AdapterInsertOptions): boolean {
     if (!Insert.insertEmpty(scroller, params)) {
-      if (!Insert.insertInBuffer(scroller, params)) {
+      if (!Insert.insertInBuffer(scroller, params)) { //TODO
         if (!Insert.insertVirtually(scroller, params)) {
           return false;
         }
@@ -67,7 +67,7 @@ export default class Insert extends BaseAdapterProcessFactory(AdapterProcess.ins
       fixRight: decrease
     };
 
-    return Update.doUpdate(scroller, updateOptions);
+    return Update.doUpdate(scroller, updateOptions); //TODO
   }
 
   static insertVirtually(scroller: Scroller, params: AdapterInsertOptions): boolean {

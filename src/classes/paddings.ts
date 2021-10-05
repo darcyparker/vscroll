@@ -15,6 +15,7 @@ export class Padding {
   }
 
   reset(size?: number): void {
+    //TODO
     this.size = size || 0;
   }
 
@@ -22,6 +23,7 @@ export class Padding {
     return this.routines.getSizeStyle(this.element);
   }
 
+  //TODO
   set size(value: number) {
     this.routines.setSizeStyle(this.element, value);
   }
@@ -49,18 +51,22 @@ export class Paddings {
     const positive = this.getPositiveSize(startIndex, viewportSize, offset);
     const negative = this.getNegativeSize(startIndex);
     if (this.settings.inverse) {
+      //TODO
       this.forward.reset(negative);
       this.backward.reset(positive);
       const diff = viewportSize - this.backward.size - offset;
       if (diff > 0) {
+        //TODO
         this.backward.size += diff;
         this.forward.size -= diff;
       }
     } else {
+      //TODO
       this.forward.reset(positive);
       this.backward.reset(negative);
       const diff = viewportSize - this.forward.size - offset;
       if (diff > 0) {
+        //TODO
         this.backward.size -= diff;
         this.forward.size += diff;
       }

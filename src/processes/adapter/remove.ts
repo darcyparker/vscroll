@@ -11,7 +11,7 @@ export default class Remove extends BaseAdapterProcessFactory(AdapterProcess.rem
     if (!params) {
       return;
     }
-    const shouldRemove = Remove.doRemove(scroller, params);
+    const shouldRemove = Remove.doRemove(scroller, params); //TODO
 
     scroller.workflow.call({
       process: Remove.process,
@@ -22,7 +22,7 @@ export default class Remove extends BaseAdapterProcessFactory(AdapterProcess.rem
   static doRemove(scroller: Scroller, params: AdapterRemoveOptions): boolean {
     const { fetch } = scroller.state;
     fetch.firstVisible.index = NaN;
-    const removed = Remove.removeBufferedItems(scroller, params);
+    const removed = Remove.removeBufferedItems(scroller, params); //TODO
     const shouldBuffered = removed.length > 0;
     if (shouldBuffered) {
       // exclude just removed in-buffer indexes
@@ -62,7 +62,7 @@ export default class Remove extends BaseAdapterProcessFactory(AdapterProcess.rem
       predicate: item => !newPredicate(item),
       fixRight: increase
     };
-    Update.doUpdate(scroller, updateOptions);
+    Update.doUpdate(scroller, updateOptions); //TODO
     return indexesToRemove;
   }
 

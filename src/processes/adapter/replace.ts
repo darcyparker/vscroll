@@ -10,7 +10,7 @@ export default class Replace extends BaseAdapterProcessFactory(AdapterProcess.re
     if (!params) {
       return;
     }
-    const shouldReplace = Replace.doReplace(scroller, params);
+    const shouldReplace = Replace.doReplace(scroller, params); //TODO
 
     scroller.workflow.call({
       process: Replace.process,
@@ -43,7 +43,7 @@ export default class Replace extends BaseAdapterProcessFactory(AdapterProcess.re
       fixRight: params.fixRight
     };
 
-    return Update.doUpdate(scroller, updateOptions);
+    return Update.doUpdate(scroller, updateOptions); //TODO
   }
 
 }

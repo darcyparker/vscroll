@@ -68,6 +68,7 @@ export class Routines {
     return parseFloat(size as string) || 0;
   }
 
+  //TODO
   setSizeStyle(element: HTMLElement, value: number): void {
     this.checkElement(element);
     value = Math.max(0, Math.round(value));
@@ -88,7 +89,7 @@ export class Routines {
 
   hideElement(element: HTMLElement): void {
     this.checkElement(element);
-    element.style.display = 'none';
+    element.style.display = 'none'; //TODO
   }
 
   getOffset(element: HTMLElement): number {

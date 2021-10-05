@@ -25,6 +25,7 @@ export default class Reset extends BaseAdapterProcessFactory(AdapterProcess.rese
     }
 
     buffer.reset(true);
+    //TODO
     paddings.backward.reset();
     paddings.forward.reset();
 
